@@ -6,15 +6,15 @@ export const Navbar = () => {
   return (
     <>
       <hr className="text-gray-400/20" />
-      <div className="flex items-center justify-center gap-8  overflow-hidden  sm:h-24">
+      <div className="flex items-center justify-center gap-8  overflow-hidden  sm:py-5">
         {NAVBAR_ITEMS.map((c, i) => (
           <a
             key={i}
-            href={c.url}
+            href={c.href}
             className="flex gap-2 flex-col items-center justify-center sm:flex-row"
           >
-            <img src={c.image} alt={c.alt} className="h-5 sm:h-6" />
-            <span className="text-sm ">{c.name}</span>
+            {/* <img src={c.image} alt={c.alt} className="h-5 sm:h-6" /> */}
+            <span className="text-sm ">{c.label}</span>
           </a>
         ))}
       </div>
@@ -30,24 +30,24 @@ export const Navbar = () => {
           <FontAwesomeIcon icon={faAngleRight} />
         </span>
         <a
-          href="http://www.ds3comunicaciones.com/cisco/index.html"
+          href="https://www.ds3comunicaciones.com/mikrotik/index.html"
           className=" hover:underline hover:text-blue-600 "
         >
-          Cisco
+          Mikrotik
         </a>
         <span className="hidden sm:block">
           <FontAwesomeIcon icon={faAngleRight} />
         </span>
         <a
-          href="http://ds3comunicaciones.com/cisco/catalyst.html"
+          href="https://www.ds3comunicaciones.com/mikrotik/index.html#Router"
           className=" hover:underline hover:text-blue-600 hidden sm:block"
         >
-          Switch Catalyst
+          Router
         </a>
         <span className="">
           <FontAwesomeIcon icon={faAngleRight} />
         </span>
-        <span className="text-neutral-700 font-semibold ">C9200L-24T-4G-E</span>
+        <span className="text-neutral-700 font-semibold ">RB750</span>
       </div>
       <hr className="text-gray-400/20" />
     </>

@@ -2,6 +2,7 @@ import type {
   Brand,
   Contact,
   Price,
+  ProductData,
   Solution,
   SuggestedProduct,
   Support,
@@ -9,46 +10,24 @@ import type {
 
 export const NAVBAR_ITEMS = [
   {
-    name: "Switch Catalyst",
-    url: "https://www.ds3comunicaciones.com/cisco/catalys_9200l.html",
-    image: "./icons/Switch Catalyst.ico",
-    alt: "",
+    href: "https://www.ds3comunicaciones.com/mikrotik/RB1100.html",
+    label: "RB1100",
   },
   {
-    name: "Cisco Business",
-    url: "https://www.ds3comunicaciones.com/cisco/bussines_sg350.html",
-    image: "./icons/Cisco Business.ico",
-    alt: "Cisco Business",
+    href: "https://www.ds3comunicaciones.com/mikrotik/RB1200.html",
+    label: "RB1200",
   },
   {
-    name: "Switch Industrial",
-    url: "https://www.ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html",
-    image: "./icons/Switch Industrial.ico",
-    alt: "Switch Industrial",
+    href: "https://www.ds3comunicaciones.com/mikrotik/RB2011L-IN.html",
+    label: "RB2011L-IN",
   },
   {
-    name: "Aironet",
-    url: "https://www.ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html",
-    image: "./icons/Aironet.ico",
-    alt: "Aironet",
+    href: "https://www.ds3comunicaciones.com/mikrotik/RB1100AH.html",
+    label: "RB1100AH",
   },
   {
-    name: "Teléfono",
-    url: "https://www.ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html",
-    image: "./icons/Télefono.ico",
-    alt: "Teléfono",
-  },
-  {
-    name: "Meraki",
-    url: "https://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html",
-    image: "./icons/mariakii.ico",
-    alt: "Meraki",
-  },
-  {
-    name: "Transceiver",
-    url: "#",
-    image: "./icons/Transceiver.ico",
-    alt: "Transceiver",
+    href: "https://www.ds3comunicaciones.com/mikrotik/RB1100AHx2.html",
+    label: "RB1100AHx2",
   },
 ];
 
@@ -114,6 +93,24 @@ export const OUR_BRANDS: Brand[] = [
     twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
   },
   {
+    brand: "Edimax",
+    logo: "http://www.ds3comunicaciones.com/belden/images/edimax_logo2-100x28.jpg",
+    url: "http://www.ds3comunicaciones.com/edimax/ew-7209APG.html",
+    twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
+  },
+  {
+    brand: "Energit",
+    logo: "http://www.ds3comunicaciones.com/Energit/images/energit_logo.jpeg",
+    url: "http://www.ds3comunicaciones.com/Energit/index.html",
+    twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
+  },
+  {
+    brand: "EnGenius",
+    logo: "http://www.ds3comunicaciones.com/belden/images/engenius_logo-100x30.jpg",
+    url: "http://www.ds3comunicaciones.com/senao/index.html",
+    twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
+  },
+  {
     brand: "FibreFab",
     logo: "http://www.ds3comunicaciones.com/FibreFab/images/logo_fibrefab.png",
     url: "https://www.ds3comunicaciones.com/FibreFab/index.html",
@@ -129,6 +126,12 @@ export const OUR_BRANDS: Brand[] = [
     brand: "L-Com",
     logo: "http://www.ds3comunicaciones.com/sitebuilder/images/lcom_logo-100x23.jpg",
     url: "https://www.ds3comunicaciones.com/l-com/",
+    twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
+  },
+  {
+    brand: "Lenovo",
+    logo: "http://www.ds3comunicaciones.com/belden/images/lenovo_bar-100x18.jpg",
+    url: "http://www.ds3comunicaciones.com/lenovo/index.html",
     twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
   },
   {
@@ -156,6 +159,12 @@ export const OUR_BRANDS: Brand[] = [
     twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
   },
   {
+    brand: "Teldor",
+    logo: "http://www.ds3comunicaciones.com/Teldor/images/logo_Teldor1.jpg",
+    url: "http://www.ds3comunicaciones.com/Teldor/index.html",
+    twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
+  },
+  {
     brand: "TP-Link",
     logo: "http://www.ds3comunicaciones.com/belden/images/tp-link_logo-100x13.jpg",
     url: "https://www.ds3comunicaciones.com/tplink/",
@@ -171,6 +180,12 @@ export const OUR_BRANDS: Brand[] = [
     brand: "Ubiquiti",
     logo: "http://www.ds3comunicaciones.com/belden/images/ubnt_logo-100x47.png",
     url: "https://www.ds3comunicaciones.com/ubiquiti/index.html",
+    twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
+  },
+  {
+    brand: "Vertical",
+    logo: "http://www.ds3comunicaciones.com/vertical/images/vertical_logo1.jpg",
+    url: "http://www.ds3comunicaciones.com/vertical/index.html",
     twStyles: "max-w-[100px] max-h-8 w-auto h-auto object-contain",
   },
 ];
@@ -294,62 +309,62 @@ export const CONTACTS: Contact[] = [
   },
 ];
 
-export const PRODUCT_RB750 = {
-  title: "RouterBOARD con 5 puertos Ethernet MIKROTIK RB750",
-  applications: {
-    "0": "Interconecte sucursales y oficinas de empresas públicas y privadas(Wireless LAN).",
-    "1": "Provee servicios de internet inalámbrico.",
-    "2": "(ISP inalámbrico).",
-    "3": "Sistemas WiFi.",
-  },
-  superiorPerformance: {
-    "0": "El RouterBOARD  MIKROTIK RB750 es un pequeño router que viene con cinco puertos Ethernet, en una caja de plástico.",
-    "1": "De diseño atractivo todo lo que buscan en una unidad pequeña SOHO, su precio es menor que la licencia RouterOS, es perfecto para administrar su red de cable en casa, el RB750 lo tiene todo.",
-    "2": "No sólo es económico, es pequeña y fácil de usar.  Es probable que sea router MPLS más económico en el mercado.  No hay compromiso entre el precio y características el RB750 tiene ambas cosas.  Con su diseño compacto y un aspecto limpio, se ajustará perfectamente a su entorno SOHO.",
-  },
-  advantages: {
-    "0": "Pequeño y compacto.",
-    "1": "Caja de plástico blanca.",
-    "2": "Cinco puertos Ethernet.",
-    "3": "Increíblemente rápido.",
-  },
-  download: {
-    "0": {
-      label: "Ficha Técnica",
-      url: "https://www.ds3comunicaciones.com/cisco/files/catalyst_9200.pdf",
+export const PRODUCT_RB750: ProductData = {
+  name: "RouterBOARD con 5 puertos Ethernet MIKROTIK RB750",
+  applications: [
+    "Interconecte sucursales y oficinas de empresas públicas y privadas(Wireless LAN).",
+    "Provee servicios de internet inalámbrico.",
+    "(ISP inalámbrico).",
+    "Sistemas WiFi.",
+  ],
+  superiorPerformance: [
+    "El RouterBOARD  MIKROTIK RB750 es un pequeño router que viene con cinco puertos Ethernet, en una caja de plástico.",
+    "De diseño atractivo todo lo que buscan en una unidad pequeña SOHO, su precio es menor que la licencia RouterOS, es perfecto para administrar su red de cable en casa, el RB750 lo tiene todo.",
+    "No sólo es económico, es pequeña y fácil de usar.  Es probable que sea router MPLS más económico en el mercado.  No hay compromiso entre el precio y características el RB750 tiene ambas cosas.  Con su diseño compacto y un aspecto limpio, se ajustará perfectamente a su entorno SOHO.",
+  ],
+  advantages: [
+    "Pequeño y compacto.",
+    "Caja de plástico blanca.",
+    "Cinco puertos Ethernet.",
+    "Increíblemente rápido.",
+  ],
+  download: [
+    {
+      label: "Datos Técnicos",
+      url: "https://www.ds3comunicaciones.com/mikrotik/files/Ds_RB750.pdf",
     },
-    "1": {
-      label: "Manual",
-      url: "https://web.netperu100.com/cisco/catalyst/files/Catalyst_9200_manual.pdf",
+    {
+      label: "Guía de Instalación Rápida",
+      url: "https://www.ds3comunicaciones.com/mikrotik/files/QIG_RB750.pdf",
     },
-    "2": {
-      label: "Especificaciones",
-      url: "https://web.netperu100.com/cisco/catalyst/files/C9200L-24T-4G-E_esp.pdf",
-    },
-  },
-  technicalSpecifications: {
-    codigoProducto: "RB750",
-    monitoreoCorriente: "No",
-    consumoMaximoEnergia: "2.5 Watt",
-    velocidadCPU: "680 MHz",
-    ram: "32 Mb",
-    arquitectura: "MIPS-BE",
-    puertosLAN: "5",
-    gigabit: "0",
-    miniPCI: "0",
-    wirelessIntegrado: "0",
-    usb: "0",
-    tarjetaMemoria: "0",
-    powerJack: "10 - 28 V",
-    soporte802_3af: "No",
-    poe: "10 - 28 V",
-    monitorVoltaje: "No",
-    temperaturaCPUmonitor: "No",
-    pcbMonitorTemperatura: "Si",
-    dimensiones: "214x86mm",
-    rangoTemperatura: "-40° a +55° C",
-    licenciaRouterOS: "Nivel 4",
-  },
+    // "2": {
+    //   label: "Especificaciones",
+    //   url: "https://web.netperu100.com/cisco/catalyst/files/C9200L-24T-4G-E_esp.pdf",
+    // },
+  ],
+  technicalSpecifications: [
+    { label: "Codigo Producto", value: "RB750" },
+    { label: "Monitoreo Corriente", value: "No" },
+    { label: "Consumo Maximo Energia", value: "2.5 Watt" },
+    { label: "Velocidad CPU", value: "680 MHz" },
+    { label: "RAM", value: "32 Mb" },
+    { label: "Arquitectura", value: "MIPS-BE" },
+    { label: "Puertos LAN", value: "5" },
+    { label: "Gigabit", value: "0" },
+    { label: "Mini PCI", value: "0" },
+    { label: "Wireless Integrado", value: "0" },
+    { label: "Usb", value: "0" },
+    { label: "Tarjeta Memoria", value: "0" },
+    { label: "Power Jack", value: "10 - 28 V" },
+    { label: "Soporte 802.3 af", value: "No" },
+    { label: "PoE", value: "10 - 28 V" },
+    { label: "Monitor Voltaje", value: "No" },
+    { label: "Temperatura CPU monitor", value: "No" },
+    { label: "PBC Monitor Temperatura", value: "Si" },
+    { label: "Dimensiones", value: "214x86mm" },
+    { label: "Rango Temperatura", value: "-40° a +55° C" },
+    { label: "Licencia RouterOS", value: "Nivel 4" },
+  ],
   PerformanceResults: [
     {
       ipFirewall: "off",

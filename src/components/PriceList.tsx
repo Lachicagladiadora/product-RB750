@@ -2,10 +2,10 @@ import { PRICE_LIST } from "../constants";
 
 export const PriceList = () => {
   return (
-    <aside className="hidden bg-white p-2 rounded-lg w-full h-full max-h-2/4 md:w-60 md:block lg:w-72">
+    <aside className="hidden bg-white p-2 rounded-lg w-full h-full max-h-2/4 md:max-w-60 md:block lg:w-72">
       <h2 className="text-lg font-bold text-gray-800 py-4">Lista de Precios</h2>
       <hr className="text-gray-400/20 hidden md:block" />
-      <div className="px-4 py-2 flex flex-col items-start justify-start gap-2 text-blue-600">
+      <div className="px-2 py-2 flex flex-col items-start justify-start gap-1 text-blue-600 text-sm">
         {PRICE_LIST.map((c, i) => (
           <a
             key={i}
