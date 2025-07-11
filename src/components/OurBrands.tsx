@@ -3,7 +3,7 @@ import { OUR_BRANDS } from "../constants";
 
 export const OurBrands = (): ReactNode => {
   return (
-    <aside className="bg-white p-2 rounded-lg w-full md:w-48 lg:w-56 h-full max-h-2/4">
+    <aside className="w-full h-full max-h-2/4 bg-white px-2 py-20 rounded-lg  md:p-2 md:w-48 lg:w-56 ">
       <h2 className="text-lg font-bold text-gray-800 py-4">Nuestras Marcas</h2>
       <hr className="text-gray-400/20 hidden md:block" />
       <div className="py-2 flex flex-row flex-wrap items-center justify-center gap-4 lg:flex-col">

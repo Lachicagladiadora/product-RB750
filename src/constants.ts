@@ -3,12 +3,13 @@ import type {
   Contact,
   Price,
   ProductData,
+  RedirectPage,
   Solution,
   SuggestedProduct,
   Support,
 } from "./types";
 
-export const NAVBAR_ITEMS = [
+export const NAVBAR_ITEMS: RedirectPage[] = [
   {
     href: "https://www.ds3comunicaciones.com/mikrotik/RB1100.html",
     label: "RB1100",
@@ -193,124 +194,130 @@ export const OUR_BRANDS: Brand[] = [
 export const PRICE_LIST: Price[] = [
   {
     label: "Lista de precios AMP",
-    url: "https://www.ds3comunicaciones.com/AMP/precios_amp.html",
+    href: "https://www.ds3comunicaciones.com/AMP/precios_amp.html",
   },
   {
     label: "Lista de precios Amphenol",
-    url: "https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html",
+    href: "https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html",
   },
   {
     label: "Lista de precios Andrew",
-    url: "https://www.ds3comunicaciones.com/andrew/precios_andrew.html",
+    href: "https://www.ds3comunicaciones.com/andrew/precios_andrew.html",
   },
   {
     label: "Lista de precios APC",
-    url: "https://www.ds3comunicaciones.com/apc/precios_apc.html",
+    href: "https://www.ds3comunicaciones.com/apc/precios_apc.html",
   },
   {
     label: "Lista de precios CISCO",
-    url: "https://www.ds3comunicaciones.com/cisco/precios_cisco.html",
+    href: "https://www.ds3comunicaciones.com/cisco/precios_cisco.html",
   },
   {
     label: "Lista de precios D-Link",
-    url: "https://www.ds3comunicaciones.com/dlink/precios_dlink.html",
+    href: "https://www.ds3comunicaciones.com/dlink/precios_dlink.html",
   },
   {
     label: "Lista de precios Dixon",
-    url: "https://www.ds3comunicaciones.com/dixon/precios_dixon.html",
+    href: "https://www.ds3comunicaciones.com/dixon/precios_dixon.html",
   },
   {
     label: "Lista de precios Energit",
-    url: "https://www.ds3comunicaciones.com/Energit/precios_energit.html",
+    href: "https://www.ds3comunicaciones.com/Energit/precios_energit.html",
   },
   {
     label: "Lista de precios Fibra",
-    url: "https://www.ds3comunicaciones.com/FibreFab/precios_fibrefab.html",
+    href: "https://www.ds3comunicaciones.com/FibreFab/precios_fibrefab.html",
   },
   {
     label: "Lista de precios HP",
-    url: "https://www.ds3comunicaciones.com/hp/precios_hp.html",
+    href: "https://www.ds3comunicaciones.com/hp/precios_hp.html",
   },
   {
     label: "Lista de precios Mikrotik",
-    url: "https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html",
+    href: "https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html",
   },
   {
     label: "Lista de precios Nexxt Solutions",
-    url: "https://www.ds3comunicaciones.com/nexxt_solutions/precios_nexxt_solutions.html",
+    href: "https://www.ds3comunicaciones.com/nexxt_solutions/precios_nexxt_solutions.html",
   },
   {
     label: "Lista de precios Panduit",
-    url: "https://www.ds3comunicaciones.com/panduit/precios_panduit.html",
+    href: "https://www.ds3comunicaciones.com/panduit/precios_panduit.html",
   },
   {
     label: "Lista de precios Siemon",
-    url: "https://www.ds3comunicaciones.com/siemon/precios_siemon.html",
+    href: "https://www.ds3comunicaciones.com/siemon/precios_siemon.html",
   },
   {
     label: "Lista de precios Teldor",
-    url: "https://www.ds3comunicaciones.com/Teldor/precios_teldor.html",
+    href: "https://www.ds3comunicaciones.com/Teldor/precios_teldor.html",
   },
   {
     label: "Lista de precios TRENDnet",
-    url: "https://www.ds3comunicaciones.com/trendnet/precios_trendnet.html",
+    href: "https://www.ds3comunicaciones.com/trendnet/precios_trendnet.html",
   },
   {
     label: "Lista de precios Ubiquiti",
-    url: "https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html",
+    href: "https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html",
   },
 ];
 
 export const SOLUTIONS: Solution[] = [
   {
     label: "Access Point",
-    url: "https://www.ds3comunicaciones.com/l-com/AccessPoint.html",
+    href: "https://www.ds3comunicaciones.com/l-com/AccessPoint.html",
   },
   {
     label: "Antenas MIMO",
-    url: "https://www.ds3comunicaciones.com/lcom/AntenasMIMO.html",
+    href: "https://www.ds3comunicaciones.com/lcom/AntenasMIMO.html",
   },
   {
     label: "Antenas de Panel",
-    url: "https://www.ds3comunicaciones.com/l-com/AntenasPanel.html",
+    href: "https://www.ds3comunicaciones.com/l-com/AntenasPanel.html",
   },
   {
     label: "Antenas Sectoriales",
-    url: "https://www.ds3comunicaciones.com/l-com/AntenaSectorial.html",
+    href: "https://www.ds3comunicaciones.com/l-com/AntenaSectorial.html",
   },
   {
     label: "Cable Pigtail",
-    url: "https://ds3comunicaciones.com/l-com/pigtail/Pigtail.html",
+    href: "https://ds3comunicaciones.com/l-com/pigtail/Pigtail.html",
   },
   {
     label: "Media Converter",
-    url: "https://www.ds3comunicaciones.com/trendnet/MediaConvert.html",
+    href: "https://www.ds3comunicaciones.com/trendnet/MediaConvert.html",
   },
 ];
 
 export const SUPPORT: Support[] = [
   {
     label: "Soporte Técnico",
-    url: "https://www.ds3comunicaciones.com/soporte.html",
+    href: "https://www.ds3comunicaciones.com/soporte.html",
   },
   {
     label: "Acerca de Nosotros",
-    url: "https://ds3comunicaciones.com/us.html",
+    href: "https://ds3comunicaciones.com/us.html",
   },
 ];
 export const CONTACTS: Contact[] = [
   {
     label: "994 428 965",
-    url: "https://wa.me/994428965?text=Hola, necesito ayuda",
+    href: "https://wa.me/994428965?text=Hola, necesito ayuda",
   },
   {
     label: "996 533 223",
-    url: "https://wa.me/996533223?text=Hola, necesito ayuda",
+    href: "https://wa.me/996533223?text=Hola, necesito ayuda",
   },
 ];
 
 export const PRODUCT_RB750: ProductData = {
   name: "RouterBOARD con 5 puertos Ethernet MIKROTIK RB750",
+  price: "U$ 59.00",
+  images: [
+    "https://www.ds3comunicaciones.com/mikrotik/images/RB750.jpg",
+    "https://www.ds3comunicaciones.com/mikrotik/images/RB750_top.jpg",
+    "https://www.ds3comunicaciones.com/mikrotik/images/RB750_hand.jpg",
+  ],
   applications: [
     "Interconecte sucursales y oficinas de empresas públicas y privadas(Wireless LAN).",
     "Provee servicios de internet inalámbrico.",
@@ -331,11 +338,11 @@ export const PRODUCT_RB750: ProductData = {
   download: [
     {
       label: "Datos Técnicos",
-      url: "https://www.ds3comunicaciones.com/mikrotik/files/Ds_RB750.pdf",
+      href: "https://www.ds3comunicaciones.com/mikrotik/files/Ds_RB750.pdf",
     },
     {
       label: "Guía de Instalación Rápida",
-      url: "https://www.ds3comunicaciones.com/mikrotik/files/QIG_RB750.pdf",
+      href: "https://www.ds3comunicaciones.com/mikrotik/files/QIG_RB750.pdf",
     },
     // "2": {
     //   label: "Especificaciones",
@@ -365,7 +372,7 @@ export const PRODUCT_RB750: ProductData = {
     { label: "Rango Temperatura", value: "-40° a +55° C" },
     { label: "Licencia RouterOS", value: "Nivel 4" },
   ],
-  PerformanceResults: [
+  performanceResults: [
     {
       ipFirewall: "off",
       conntrack: "off",
@@ -422,41 +429,6 @@ export const PRODUCT_RB750: ProductData = {
       fps3: "35000",
     },
   ],
-};
-
-export const MORE_DETAILS = {
-  technicalSpecifications: {
-    label: "Especificaciones Técnicas",
-    content: [
-      "Tipo de dispositivo: Cisco Catalyst 9200L C9200L-24T-4G-E, Switch capa L3 full (Layer 3)",
-      "Conectividad: 24 puertos Gigabit 10/100/1000 + 4 puertos 1G para fibra SFP",
-      "Dimensiones: 445 x 332 x 44 mm",
-      "Peso: 5.4 kg",
-    ],
-  },
-
-  supportedProtocols: {
-    label: "Protocolos Soportados",
-    content: [
-      "Protocolo de direccionamiento: OSPF, IS-IS, BGP, EIGRP, DVMRP, PIM-SM, IGMPv3, GRE, PIM-SSM, enrutamiento IPv4 estático, enrutamiento IPv6 estático",
-      "Protocolo de gestión remota: SNMP 1, RMON, Telnet, SNMP 3, SNMP 2c, HTTP, HTTPS, SSH",
-    ],
-  },
-
-  complianceWithStandards: {
-    label: "Cumplimiento de Normas",
-    content: [
-      "IEEE 802.3, IEEE 802.3u, IEEE 802.3z, IEEE 802.1D, IEEE 802.1Q, IEEE 802.3ab, IEEE 802.1p, IEEE 802.3af, IEEE 802.3x, IEEE 802.3ad (LACP), IEEE 802.1w, IEEE 802.1x, IEEE 802.1s, IEEE 802.3ah, IEEE 802.1ab (LLDP)",
-    ],
-  },
-
-  certificationsAndEnvironment: {
-    label: "Certificaciones y Ambiente",
-    content: [
-      "Certificaciones: CE, TUV GS, cUL, EN 60950, EN55022, NOM, VCCI Class A ITE, IEC 60950, EN55024, FCC Part 15, UL 1950 (3), CSA 22.2 No. 950 (3)",
-      "Temperatura de operación: -5 – 45 °C",
-    ],
-  },
 };
 
 export const SUGGESTIONS: SuggestedProduct[] = [

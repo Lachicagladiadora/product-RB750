@@ -1,84 +1,53 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { ProductData, RedirectPage } from "../types";
+import type { ProductData } from "../types";
 import { PerformanceResultsTable } from "./PerformanceResultsTable";
 import { TechnicalSpecificationsTable } from "./TechnicalSpecificationsTable";
-import { faBook, faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { Applications } from "./Applications";
+import { SuperiorPerformance } from "./SuperiorPerformance";
+import { Advantages } from "./Advantages";
+import { DownloadResources } from "./DownloadResources";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { ImagePreview } from "./ImagePreview";
 
-type ProductDetailsProps = { product: ProductData; download: RedirectPage[] };
+type ProductDetailsProps = { product: ProductData };
 
-export const ProductDetails = ({ product, download }: ProductDetailsProps) => {
+export const ProductDetails = ({ product }: ProductDetailsProps) => {
   return (
     <>
       {!product && <p>Not found</p>}
       {product && (
-        <article className="w-full flex flex-col ">
-          <h2 className="text-blue-900/90 font-bold text-start py-4 text-xl">
-            {product.name}
-          </h2>
-
+        <article className="w-full p-4 flex flex-col">
           <div>
-            <div>
-              <h3 className="text-blue-600/90 font-bold text-start py-4">
-                Aplicaciones
-              </h3>
-              <ol>
-                {product.applications.map((c, i) => (
-                  <li key={i} className="text-start list-inside list-disc">
-                    {c}
-                  </li>
-                ))}
-              </ol>
-            </div>
+            <h2 className="text-blue-900/90 font-bold text-start py-4 text-xl">
+              {product.name}
+            </h2>
 
-            <div>
-              <h3 className="text-blue-600/90 font-bold text-start py-4">
-                Desempeño Superior
-              </h3>
-              <ol className="flex flex-col gap-5">
-                {product.superiorPerformance.map((c, i) => (
-                  <li key={i} className="text-start">
-                    {c}
-                  </li>
-                ))}
-              </ol>
+            <ImagePreview
+              productName={product.name}
+              imageList={product.images}
+            />
+            <div className="py-4 flex justify-between items-center gap-10">
+              <p className="text-blue-600/90 font-bold text-start py-4 text-2xl">
+                {product.price}
+              </p>
+              <button className="px-4 py-3 flex items-center justify-center gap-4 rounded-md bg-blue-600/70 text-white font-bold hover:bg-blue-600/80">
+                <FontAwesomeIcon icon={faCartPlus} />
+                <p>Comprar ahora</p>
+              </button>
             </div>
+            <hr className="text-gray-400/20 hidden md:block" />
+          </div>
 
-            <div>
-              <h3 className="text-blue-600/90 font-bold text-start py-4">
-                Ventajas
-              </h3>
-              <ol>
-                {product.advantages.map((c, i) => (
-                  <li key={i} className="text-start list-inside list-disc">
-                    {c}
-                  </li>
-                ))}
-              </ol>
-            </div>
+          <div className="w-full flex flex-col gap-8 md:gap-10">
+            <Applications list={product.applications} />
+            <SuperiorPerformance list={product.superiorPerformance} />
+            <Advantages list={product.advantages} />
 
-            <div className=" flex flex-col gap-3">
-              <h3 className="text-blue-600/90 font-bold text-start py-4">
-                Download
-              </h3>
-              <a
-                href={download[0].url}
-                className="w-full max-w-[375px] flex mx-auto items-center justify-center gap-4 rounded-md border border-red-600/70 text-red-600/70"
-              >
-                <FontAwesomeIcon icon={faFilePdf} />{" "}
-                <span>{download[0].label}</span>
-              </a>
-              <a
-                href={download[1].url}
-                className="w-full max-w-[375px] flex mx-auto items-center justify-center gap-4 rounded-md border border-blue-600/70 text-blue-600/70"
-              >
-                <FontAwesomeIcon icon={faBook} />{" "}
-                <span>{download[1].label}</span>
-              </a>
-            </div>
+            <DownloadResources list={product.download} />
             <TechnicalSpecificationsTable
               specifications={product.technicalSpecifications}
             />
-            <PerformanceResultsTable resultList={product.PerformanceResults} />
+            <PerformanceResultsTable resultList={product.performanceResults} />
           </div>
         </article>
       )}

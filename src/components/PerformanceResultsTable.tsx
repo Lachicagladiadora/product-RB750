@@ -6,11 +6,11 @@ export const PerformanceResultsTable = ({
   resultList,
 }: PerformanceResultsProps) => {
   return (
-    <>
+    <div className="p-1 md:p-4">
       <h3 className="text-blue-600/90 font-bold text-start py-4">
         Resultados del Rendimiento
       </h3>
-      <table className="w-full p-2 text-sm">
+      <table className="w-full p-2 text-sm shadow rounded-sm">
         <thead>
           <tr className="text-white bg-blue-600/90">
             <th colSpan={3} className="px-2">
@@ -54,6 +54,6 @@ export const PerformanceResultsTable = ({
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };

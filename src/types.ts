@@ -5,7 +5,7 @@ export type Brand = {
   twStyles: string;
 };
 
-export type RedirectPage = { label: string; url: string };
+export type RedirectPage = { label: string; href: string };
 
 export type Price = RedirectPage;
 export type Solution = RedirectPage;
@@ -27,16 +27,15 @@ export type PerformanceResults = {
 
 export type ProductData = {
   name: string;
+  price: string;
+  images: string[];
   applications: string[];
   superiorPerformance: string[];
   advantages: string[];
   download: RedirectPage[];
-
   technicalSpecifications: TechnicalSpecifications;
-  PerformanceResults: PerformanceResults[];
+  performanceResults: PerformanceResults[];
 };
-
-// export type technicalSpecifications = {};
 
 export type SuggestedProduct = {
   name: string;

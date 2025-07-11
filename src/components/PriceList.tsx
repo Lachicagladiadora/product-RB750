@@ -9,7 +9,7 @@ export const PriceList = () => {
         {PRICE_LIST.map((c, i) => (
           <a
             key={i}
-            href={c.url}
+            href={c.href}
             target="_blank"
             className="w-full p-2 text-start rounded-sm hover:underline hover:bg-blue-600/5 hover:underline-offset-4"
           >
